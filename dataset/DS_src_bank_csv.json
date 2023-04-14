@@ -5,6 +5,9 @@
 			"referenceName": "Ls_dev_bs",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "Neelima_DS"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
