@@ -448,6 +448,270 @@
 			"dependsOn": []
 		},
 		{
+			"name": "[concat(parameters('factoryName'), '/DS_src_sales_csv')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "Ls_dev_bs",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "Neelima_DS"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"fileName": "california_health_2010.csv",
+						"folderPath": "raw",
+						"container": "neelima-de"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": [
+					{
+						"name": "COUNTY",
+						"type": "String"
+					},
+					{
+						"name": "HOSPITAL",
+						"type": "String"
+					},
+					{
+						"name": "COMMENT LETTERS",
+						"type": "String"
+					},
+					{
+						"name": "ESOPHAGEAL RESECTION\n(Risk-Adjusted Mortality Rate)",
+						"type": "String"
+					},
+					{
+						"name": "ESOPHAGEAL RESECTION\n(# of Deaths)",
+						"type": "String"
+					},
+					{
+						"name": "ESOPHAGEAL RESECTION\n(# of Cases)",
+						"type": "String"
+					},
+					{
+						"name": "ESOPHAGEAL RESECTION\n(Outlier Ratings)",
+						"type": "String"
+					},
+					{
+						"name": "PANCREATIC RESECTION\n(Risk-Adjusted Mortality Rate)",
+						"type": "String"
+					},
+					{
+						"name": "PANCREATIC RESECTION\n(# of Deaths)",
+						"type": "String"
+					},
+					{
+						"name": "PANCREATIC RESECTION\n(# of Cases)",
+						"type": "String"
+					},
+					{
+						"name": "PANCREATIC RESECTION\n(Outlier Ratings)",
+						"type": "String"
+					},
+					{
+						"name": "AAA REPAIR\n(Risk-Adjusted Mortality Rate)",
+						"type": "String"
+					},
+					{
+						"name": "AAA REPAIR\n(# of Deaths)",
+						"type": "String"
+					},
+					{
+						"name": "AAA REPAIR\n(# of Cases)",
+						"type": "String"
+					},
+					{
+						"name": "AAA REPAIR    (Outlier Ratings)",
+						"type": "String"
+					},
+					{
+						"name": "CRANIOTOMY\n(Risk-Adjusted Mortality Rate)",
+						"type": "String"
+					},
+					{
+						"name": "CRANIOTOMY\n(# of Deaths)",
+						"type": "String"
+					},
+					{
+						"name": "CRANIOTOMY\n(# of Cases)",
+						"type": "String"
+					},
+					{
+						"name": "CRANIOTOMY (Outlier Ratings)",
+						"type": "String"
+					},
+					{
+						"name": "ACUTE MYOCARDIAL INFARCTION\n(Risk-Adjusted Mortality Rate)",
+						"type": "String"
+					},
+					{
+						"name": "ACUTE MYOCARDIAL INFARCTION\n(# of Deaths)",
+						"type": "String"
+					},
+					{
+						"name": "ACUTE MYOCARDIAL INFARCTION\n(# of Cases)",
+						"type": "String"
+					},
+					{
+						"name": "ACUTE MYOCARDIAL INFARCTION\n(Outlier Ratings)",
+						"type": "String"
+					},
+					{
+						"name": "HEART FAILURE\n(Risk-Adjusted Mortality Rate)",
+						"type": "String"
+					},
+					{
+						"name": "HEART FAILURE\n(# of Deaths)",
+						"type": "String"
+					},
+					{
+						"name": "HEART FAILURE\n(# of Cases)",
+						"type": "String"
+					},
+					{
+						"name": "HEART FAILURE\n(Outlier Ratings)",
+						"type": "String"
+					},
+					{
+						"name": "ACUTE STROKE\n(Risk-Adjusted Mortality Rate)",
+						"type": "String"
+					},
+					{
+						"name": "ACUTE STROKE\n(# of Deaths)",
+						"type": "String"
+					},
+					{
+						"name": "ACUTE STROKE\n(# of Cases)",
+						"type": "String"
+					},
+					{
+						"name": "ACUTE STROKE (Outlier Ratings)",
+						"type": "String"
+					},
+					{
+						"name": "GI HEMORRHAGE (Risk-Adjusted Mortality Rate)",
+						"type": "String"
+					},
+					{
+						"name": "GI HEMORRHAGE\n(# of Deaths)",
+						"type": "String"
+					},
+					{
+						"name": "GI HEMORRHAGE\n(# of Cases)",
+						"type": "String"
+					},
+					{
+						"name": "GI HEMORRHAGE (Outlier Ratings)",
+						"type": "String"
+					},
+					{
+						"name": "HIP FRACTURE\n(Risk-Adjusted Mortality Rate)",
+						"type": "String"
+					},
+					{
+						"name": "HIP FRACTURE\n(# of Deaths)",
+						"type": "String"
+					},
+					{
+						"name": "HIP FRACTURE\n(# of Cases)",
+						"type": "String"
+					},
+					{
+						"name": "HIP FRACTURE (Outlier Ratings)",
+						"type": "String"
+					},
+					{
+						"name": "PNEUMONIA\n(Risk-Adjusted Mortality Rate)",
+						"type": "String"
+					},
+					{
+						"name": "PNEUMONIA\n(# of Deaths)",
+						"type": "String"
+					},
+					{
+						"name": "PNEUMONIA\n(# of Cases)",
+						"type": "String"
+					},
+					{
+						"name": "PNEUMONIA (Outlier Ratings)",
+						"type": "String"
+					},
+					{
+						"name": "PCI\n(Risk-Adjusted Mortality Rate)",
+						"type": "String"
+					},
+					{
+						"name": "PCI\n(# of Deaths)",
+						"type": "String"
+					},
+					{
+						"name": "PCI\n(# of Cases)",
+						"type": "String"
+					},
+					{
+						"name": "PCI\n(Outlier Ratings)",
+						"type": "String"
+					},
+					{
+						"name": "CAROTID ENDARTERECTOMY\n(Risk-Adjusted Mortality Rate)",
+						"type": "String"
+					},
+					{
+						"name": "CAROTID ENDARTERECTOMY\n(# of Deaths)",
+						"type": "String"
+					},
+					{
+						"name": "CAROTID ENDARTERECTOMY\n(# of Cases)",
+						"type": "String"
+					},
+					{
+						"name": "CAROTID ENDARTERECTOMY\n(Outlier Ratings)",
+						"type": "String"
+					}
+				]
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/DS_tgt_sales_csv')]",
+			"type": "Microsoft.DataFactory/factories/datasets",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"linkedServiceName": {
+					"referenceName": "Ls_dev_bs",
+					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "Neelima_DS"
+				},
+				"annotations": [],
+				"type": "DelimitedText",
+				"typeProperties": {
+					"location": {
+						"type": "AzureBlobStorageLocation",
+						"folderPath": "staging",
+						"container": "neelima-de"
+					},
+					"columnDelimiter": ",",
+					"escapeChar": "\\",
+					"firstRowAsHeader": true,
+					"quoteChar": "\""
+				},
+				"schema": []
+			},
+			"dependsOn": []
+		},
+		{
 			"name": "[concat(parameters('factoryName'), '/Pl_bank_csv')]",
 			"type": "Microsoft.DataFactory/factories/pipelines",
 			"apiVersion": "2018-06-01",
@@ -1462,108 +1726,6 @@
 			"dependsOn": [
 				"[concat(variables('factoryId'), '/datasets/pp1_src_org_csv1')]",
 				"[concat(variables('factoryId'), '/datasets/pp_tgt_org_csv1')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/PL_copy_file')]",
-			"type": "Microsoft.DataFactory/factories/pipelines",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"activities": [
-					{
-						"name": "df_copy_california_health_2010",
-						"type": "ExecuteDataFlow",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "0.12:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"dataflow": {
-								"referenceName": "df_copy_california_health_2010",
-								"type": "DataFlowReference",
-								"parameters": {},
-								"datasetParameters": {
-									"Srccaliforniahealth2010": {},
-									"sink1": {}
-								}
-							},
-							"staging": {},
-							"compute": {
-								"coreCount": 8,
-								"computeType": "General"
-							},
-							"traceLevel": "Fine"
-						}
-					}
-				],
-				"policy": {
-					"elapsedTimeMetric": {},
-					"cancelAfter": {}
-				},
-				"folder": {
-					"name": "Venkat_PL"
-				},
-				"annotations": [],
-				"lastPublishTime": "2023-04-14T05:16:23Z"
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/dataflows/df_copy_california_health_2010')]"
-			]
-		},
-		{
-			"name": "[concat(parameters('factoryName'), '/Pl_Org_csv_copy')]",
-			"type": "Microsoft.DataFactory/factories/pipelines",
-			"apiVersion": "2018-06-01",
-			"properties": {
-				"activities": [
-					{
-						"name": "DF_Org",
-						"type": "ExecuteDataFlow",
-						"dependsOn": [],
-						"policy": {
-							"timeout": "0.12:00:00",
-							"retry": 0,
-							"retryIntervalInSeconds": 30,
-							"secureOutput": false,
-							"secureInput": false
-						},
-						"userProperties": [],
-						"typeProperties": {
-							"dataflow": {
-								"referenceName": "DF_Org",
-								"type": "DataFlowReference",
-								"parameters": {},
-								"datasetParameters": {
-									"source1": {},
-									"sink1": {}
-								}
-							},
-							"staging": {},
-							"compute": {
-								"coreCount": 8,
-								"computeType": "General"
-							},
-							"traceLevel": "Fine"
-						}
-					}
-				],
-				"policy": {
-					"elapsedTimeMetric": {},
-					"cancelAfter": {}
-				},
-				"folder": {
-					"name": "Neelima_PL"
-				},
-				"annotations": [],
-				"lastPublishTime": "2023-04-14T05:40:26Z"
-			},
-			"dependsOn": [
-				"[concat(variables('factoryId'), '/dataflows/DF_Org')]"
 			]
 		}
 	]
