@@ -30,6 +30,8 @@
 		"folder": {
 			"name": "Neelima_PL"
 		},
-		"annotations": []
-	}
+		"annotations": [],
+		"lastPublishTime": "2023-04-14T07:03:48Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
 }
